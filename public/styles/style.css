@@ -239,11 +239,11 @@ footer address a:hover {
 }
 .main-home #faq .dropdowns {
   min-width: 240px;
-  max-width: 700px;
+  max-width: 600px;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   justify-content: initial;
   align-items: stretch;
 }
@@ -389,6 +389,9 @@ footer address a:hover {
   }
   .main-home #performances .cards article p {
     font-size: 1.3rem;
+  }
+  .main-home #faq {
+    padding-inline: 40px;
   }
 }
 

@@ -81,9 +81,9 @@
         @include p(60px 10px);
 
         .dropdowns {
-            @include minmax-w(240px, 700px);
+            @include minmax-w(240px, 600px);
             @include mx(auto);
-            @include flex(10px, column);
+            @include flex(20px, column);
 
             details {
                 border-radius: 10px;
