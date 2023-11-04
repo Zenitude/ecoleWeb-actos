@@ -1,0 +1,44 @@
+footer {
+    @include size-container(100%, 70px);
+    @include flex(10px, column);
+    @include bg($color-white);
+    @include py(20px 40px);
+    border-top: 1px dashed $color-black;
+
+    h2 {
+        @include size-container(100%);
+        @include text(2.5rem, center, 100);
+        @include my(20px);
+    }
+
+    .networks {
+        @include flex(10px, row, center, center);
+
+        a {
+            display: block;
+            @include size-container(40px);
+
+            img {
+                @include size-container(100%, 100%);
+            }
+        }
+    }
+
+    address {
+        @include flex(10px, column, default, center);
+        @include text(1.3rem);
+        color: $color-dark;
+        
+        a {
+            color: $color-dark;
+            text-decoration: underline dotted;
+            &:hover {
+                text-decoration: none;
+                font-weight: bold;
+                border: 2px solid $color-black;
+                @include p(2px 5px);
+                border-radius: 15px;
+            }
+        }
+    }
+}

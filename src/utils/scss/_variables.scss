@@ -1,0 +1,16 @@
+$font-title : 'Comfortaa', sans-serif;
+$font-text: 'Roboto', sans-serif;
+
+$color-blue: #8a56eb;
+$color-white: #f1f1f1;
+$color-dark: #333;
+$color-black: #000;
+
+$linear-harlequin: 
+    linear-gradient(45deg, rgba(251, 247, 230, 0.53) 0%, rgba(251, 247, 230, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 100.002%), 
+    linear-gradient(135deg, #f890d8 0%, #f890d8 12.5%, #ffa1eb 12.5%, #ffa1eb 25%, #f6a7f1 25%, #f6a7f1 37.5%, #f2b8fb 37.5%, #f2b8fb 50%, #e0b7f6 50%, #e0b7f6 62.5%, #d4b7fd 62.5%, #d4b7fd 75%, #a192fb 75%, #a192fb 87.5%, #939ff8 87.5%, #939ff8 100%);
+
+$linear-trial: 
+    linear-gradient(45deg, #8a56eb, #3297a8);
+
+$bg-home: url('../../assets/home/background-accueil.jpg') no-repeat;

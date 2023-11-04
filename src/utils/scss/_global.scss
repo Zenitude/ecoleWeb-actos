@@ -1,0 +1,14 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    @include m(0);
+    @include p(0);
+}
+
+html, body, #root {
+    @include size-container(100%, 100%);
+    font-family: $font-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-text;
+}

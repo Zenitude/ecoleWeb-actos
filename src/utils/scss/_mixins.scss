@@ -1,0 +1,109 @@
+@mixin flex($gap: 0, $direction:row, $justify: default, $items: default) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+    justify-content: map-get(
+        (
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            between: space-between,
+            around: space-around,
+            evenly: space-evenly,
+            default: initial
+        )
+        , $justify
+    );
+    
+    align-items: map-get(
+        (
+            start: flex-start,
+            end: flex-end,
+            center: center,
+            default: stretch
+        )
+        , $items
+    );
+}
+
+@mixin size-container($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin bg($color: none, $image: none, $linear: none) {
+    @if $color != none {
+        background: $color;
+    } @else if $image != none {
+        background: url($image) no-repeat;
+    } @else if $linear != none {
+        background: $linear;
+    }
+}
+
+@mixin m($m:0) {
+    margin: $m;
+}
+
+@mixin mt($mt:0) {
+    margin-top: $mt;
+}
+
+@mixin mb($mb:0) {
+    margin-bottom: $mb;
+}
+
+@mixin ms($ms:0) {
+    margin-left: $ms;
+}
+
+@mixin me($me:0) {
+    margin-right: $me;
+}
+
+@mixin mx($mx:0) {
+    margin-inline: $mx;
+}
+
+@mixin my($my:0) {
+    margin-block: $my;
+}
+
+@mixin mb($mb:0) {
+    margin-bottom: $mb;
+}
+
+@mixin p($p:0) {
+    padding: $p;
+}
+
+@mixin pt($pt:0) {
+    padding-top: $pt;
+}
+
+@mixin pb($pb:0) {
+    padding-bottom: $pb;
+}
+
+@mixin ps($ps:0) {
+    padding-left: $ps;
+}
+
+@mixin pe($pe:0) {
+    padding-right: $pe;
+}
+
+@mixin px($px:0) {
+    padding-inline: $px;
+}
+
+@mixin py($py:0) {
+    padding-block: $py;
+}
+
+@mixin text($size: 1rem, $align: left, $weight: normal, $style: normal, ) {
+    font-size: $size;
+    font-weight: $weight;
+    font-style: $style;
+    text-align: $align;
+}

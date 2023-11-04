@@ -1,0 +1,60 @@
+header {
+    @include size-container(100%);
+    min-height: 70px;
+    @include flex(0, column);
+    position: relative;
+    top: 0;
+    border-bottom: 1px solid $color-black;
+
+    a {
+        display: block;
+        @include size-container(100%, 70px);
+        @include flex(0, row, center, center);
+        @include text(2rem);
+        text-decoration: none;
+        color: $color-black;
+    }
+
+    .menu {
+        @include size-container(50px, 50px);
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        border: none;
+        @include bg(transparent);
+
+        img {
+            @include size-container(30px, 30px);
+        }
+
+    }
+
+    nav {
+        @include flex(10px, column, center, center);
+        @include pb(20px);
+
+        a {
+            display: block;
+            @include size-container(fit-content, 70px);
+            @include flex(0, row, center, center);
+            @include text(1.5rem);
+            text-decoration: none;
+            color: $color-black;
+            position: relative;
+
+            &::after {
+                content: '';
+                @include size-container(100%, 2px);
+                @include bg($color-black);
+                position: absolute;
+                bottom: -5px;
+                transform: scale(0);
+                transition: transform 0.5s ease-in-out;
+            }
+
+            &:hover::after {
+                transform: scale(1);
+            }
+        }
+    }
+}

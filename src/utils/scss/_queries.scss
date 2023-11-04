@@ -1,0 +1,40 @@
+@media (min-width: 715px) {
+    header {
+        @include flex(10px, row, center, center);
+        @include px(20px);
+        a {
+            @include size-container(auto, auto);
+        }
+
+        nav {
+            //@include size-container(auto, 70px);
+            flex-grow: 1;
+            @include pb(0);
+            @include flex(20px, row, default, center);
+            
+            a:first-of-type {
+                @include ms(auto);
+            }
+
+            a {
+                @include size-container(auto, auto);
+                @include text(1.3rem); 
+            }
+
+            [href="/trial"] {
+                @include size-container(auto, 50px);
+                @include px(10px);
+                @include ms(auto);
+                @include bg(none, none, $linear-trial);
+                border-radius: 15px;
+                color: $color-white;
+            
+                &::after {
+                    @include size-container(auto, auto);
+                }
+                
+
+            }
+        }
+    }
+}

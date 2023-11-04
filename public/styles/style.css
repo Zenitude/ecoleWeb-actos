@@ -1,0 +1,220 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: initial;
+  align-items: stretch;
+  position: relative;
+  top: 0;
+  border-bottom: 1px solid #000;
+}
+header a {
+  display: block;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+}
+header .menu {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background: transparent;
+}
+header .menu img {
+  width: 30px;
+  height: 30px;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+header nav a {
+  display: block;
+  width: fit-content;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+header nav a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: -5px;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+}
+header nav a:hover::after {
+  transform: scale(1);
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: initial;
+  align-items: stretch;
+  background: #f1f1f1;
+  padding-block: 20px 40px;
+  border-top: 1px dashed #000;
+}
+footer h2 {
+  width: 100%;
+  height: auto;
+  font-size: 2.5rem;
+  font-weight: 100;
+  font-style: normal;
+  text-align: center;
+  margin-block: 20px;
+}
+footer .networks {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+footer .networks a {
+  display: block;
+  width: 40px;
+  height: auto;
+}
+footer .networks a img {
+  width: 100%;
+  height: 100%;
+}
+footer address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: initial;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  color: #333;
+}
+footer address a {
+  color: #333;
+  text-decoration: underline dotted;
+}
+footer address a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #000;
+  padding: 2px 5px;
+  border-radius: 15px;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: initial;
+  align-items: stretch;
+}
+.layout main {
+  flex-grow: 1;
+}
+
+@media (min-width: 715px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+  }
+  header a {
+    width: auto;
+    height: auto;
+  }
+  header nav {
+    flex-grow: 1;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: initial;
+    align-items: center;
+  }
+  header nav a:first-of-type {
+    margin-left: auto;
+  }
+  header nav a {
+    width: auto;
+    height: auto;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+  }
+  header nav [href="/trial"] {
+    width: auto;
+    height: 50px;
+    padding-inline: 10px;
+    margin-left: auto;
+    background: linear-gradient(45deg, #8a56eb, #3297a8);
+    border-radius: 15px;
+    color: #f1f1f1;
+  }
+  header nav [href="/trial"]::after {
+    width: auto;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
