@@ -1,7 +1,7 @@
 import close from "./header/croix.svg";
 import open from "./header/menu.svg";
 
-import bgHome from "./home/background-accueil.jpg";
+import server from "./home/background-accueil.jpg";
 import plus from "./home/plus.svg";
 import minus from "./home/minus.svg";
 
@@ -15,7 +15,7 @@ import gallery from "./prices/img-galerie.jpg";
 
 export {
     close, open,
-    bgHome, plus, minus,
+    server, plus, minus,
     facebook, globe, instagram, linkedin, twitter,
     gallery
 }

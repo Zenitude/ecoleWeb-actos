@@ -2,9 +2,10 @@ header {
     @include size-container(100%);
     min-height: 70px;
     @include flex(0, column);
-    position: relative;
+    position: fixed;
     top: 0;
-    border-bottom: 1px solid $color-black;
+    @include bg(rgba(255,255,255,1));
+    z-index: 10;
 
     a {
         display: block;
@@ -22,6 +23,7 @@ header {
         top: 10px;
         border: none;
         @include bg(transparent);
+        cursor: pointer;
 
         img {
             @include size-container(30px, 30px);
@@ -32,6 +34,7 @@ header {
     nav {
         @include flex(10px, column, center, center);
         @include pb(20px);
+        border-bottom: 1px solid $color-black;
 
         a {
             display: block;

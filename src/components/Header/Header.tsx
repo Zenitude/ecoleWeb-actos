@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { open, close } from "../../assets";
 
@@ -8,10 +8,27 @@ type HeaderProps = {
 
 export default function Header({size}: HeaderProps) {
     const [ toggle, setToggle ] = useState(false);
+    const headerRef = useRef<HTMLElement>(null);
     
+    useEffect(() => {
+        const header = headerRef.current;
+        const scrollPage = () => {
+            const scroll = window.innerHeight - window.scrollY;
+            if(header !== null) {
+                if(scroll < window.innerHeight) {
+                    header.style.borderBottom = '1px solid rgba(0,0,0,1)';
+                }
+                else if(scroll === window.innerHeight) {
+                    header.style.borderBottom = 'none';
+                }
+            }
+        }
+        window.addEventListener('scroll', scrollPage);
+        return () => window.removeEventListener('scroll', scrollPage);
+    }, [])
 
     return (
-        <header>
+        <header ref={headerRef}>
             <Link to={"/"}>ACTOS</Link>
             {
                 ((size > 715) || (size < 715 && toggle)) &&

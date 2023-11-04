@@ -1,0 +1,161 @@
+.main-home {
+    @include py(70px 110px);
+
+    #hosting {
+        @include p(20px 10px 60px);
+
+        h1 {
+            @include text(3rem, center);
+            @include my(40px 10px);
+        }
+        
+        p {
+            @include text(1.5rem, center);
+        }
+
+        figure {
+            @include size-container(100%);
+            @include minmax-w(240px, 700px);
+            @include mx(auto);
+
+            img {
+                @include size-container(100%)
+            }
+            
+        }
+    }
+
+    #performances, #faq, #satisfaction {
+        h2 {
+            @include size-container(fit-content);
+            @include mx(auto);
+            @include mb(80px);
+            @include text(2.1rem, center);
+            @include flex(0, column, center, center);
+            position: relative;
+            
+            &::after {
+                content:'';
+                position: absolute;
+                bottom: -5px;
+                @include size-container(80%, 2px);
+                @include bg($color-black);
+            }
+        }
+    }
+
+    #performances {
+        @include minmax-h(500px);
+        @include bg(none, $linear-harlequin);
+        @include p(150px 10px);
+        clip-path: $clip-path-performances;
+
+        .cards {
+            @include flex(40px, row, center, center);
+            flex-wrap: wrap;
+
+            article{
+                @include size-container(30%);
+                @include minmax-w(260px);
+                @include text(1rem, center);
+
+                h3 {
+                    @include text(1.7rem);
+                }
+
+                h4 {
+                    @include size-container(50%);
+                    @include text(1.4rem);
+                    @include mx(auto);
+                }
+
+                p {
+                    @include text(1.1rem);
+                }
+
+            }
+        }
+    }
+
+    #faq {
+        @include p(60px 10px);
+
+        .dropdowns {
+            @include minmax-w(240px, 700px);
+            @include mx(auto);
+            @include flex(10px, column);
+
+            details {
+                border-radius: 10px;
+                overflow: hidden;
+
+                summary {
+                    @include bg($color-white);
+                    @include flex(10px, row, between, center);
+                    @include p(10px);
+                    @include text(1.5rem);
+                    cursor: pointer;
+                }
+    
+                .content {
+                    @include p(20px 10px);
+                    @include flex(5px, column);
+
+                    h3 {
+                        @include text(1.4rem);
+                    }
+
+                    p {
+                        line-height: 1.5;
+                        @include text(1.2rem);
+                    }
+                }
+    
+    
+            }
+            img {
+                @include size-container(25px);
+            }
+        }
+        
+    }
+
+    #satisfaction {
+        @include flex(20px, column, center, center);
+        @include minmax-h(500px);
+        @include bg(none, $linear-harlequin);
+        @include p(150px 10px);
+        clip-path: $clip-path-satisfaction;
+
+
+        h2 {
+            @include m(0);
+            &::after {
+                content: none;
+            }
+        }
+
+        p {
+            @include text(1.5rem, center);
+        }
+
+        a {
+            display: inline-block;
+            @include size-container(100%, 60px);
+            @include minmax-w(240px, 350px);
+            @include flex(0, row, center, center);
+            @include bg($color-blue);
+            @include text(1.5rem);
+            text-decoration: none;
+            color: $color-white;
+            border-radius: 30px;
+
+            &:hover {
+                border: 2px solid $color-blue;
+                color: $color-blue;
+                @include bg($color-white);
+            }
+        }
+
+    }
+}

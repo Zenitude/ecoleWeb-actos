@@ -1,5 +1,5 @@
 footer {
-    @include size-container(100%, 70px);
+    @include size-container(100%);
     @include flex(10px, column);
     @include bg($color-white);
     @include py(20px 40px);

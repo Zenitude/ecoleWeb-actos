@@ -26,84 +26,51 @@
     );
 }
 
-@mixin size-container($width: auto, $height: auto) {
+@mixin size-container($width: auto, $height: none) {
     width: $width;
-    height: $height;
+    @if $height != none {height: $height;}
 }
 
-@mixin bg($color: none, $image: none, $linear: none) {
+@mixin minmax-w($min: auto, $max: none) {
+    min-width: $min;
+    @if $max != none {max-width: $max;}
+}
+
+@mixin minmax-h($min: auto, $max: none) {
+    min-height: $min;
+    @if $max != none {max-height: $max;}
+}
+
+@mixin bg($color: none, $imageorlinear: none) {
     @if $color != none {
         background: $color;
-    } @else if $image != none {
-        background: url($image) no-repeat;
-    } @else if $linear != none {
-        background: $linear;
+    } @else if $imageorlinear != none {
+        background: $imageorlinear;
     }
 }
 
-@mixin m($m:0) {
-    margin: $m;
-}
+// Margin
+@mixin m($m:0) { margin: $m; }
+@mixin mt($mt:0) { margin-top: $mt; }
+@mixin mb($mb:0) { margin-bottom: $mb; }
+@mixin ms($ms:0) { margin-left: $ms; }
+@mixin me($me:0) { margin-right: $me; }
+@mixin mx($mx:0) { margin-inline: $mx; }
+@mixin my($my:0) { margin-block: $my; }
 
-@mixin mt($mt:0) {
-    margin-top: $mt;
-}
+// Padding
+@mixin p($p:0) { padding: $p; }
+@mixin pt($pt:0) { padding-top: $pt; }
+@mixin pb($pb:0) { padding-bottom: $pb; }
+@mixin ps($ps:0) { padding-left: $ps; }
+@mixin pe($pe:0) { padding-right: $pe; }
+@mixin px($px:0) { padding-inline: $px; }
+@mixin py($py:0) { padding-block: $py; }
 
-@mixin mb($mb:0) {
-    margin-bottom: $mb;
-}
-
-@mixin ms($ms:0) {
-    margin-left: $ms;
-}
-
-@mixin me($me:0) {
-    margin-right: $me;
-}
-
-@mixin mx($mx:0) {
-    margin-inline: $mx;
-}
-
-@mixin my($my:0) {
-    margin-block: $my;
-}
-
-@mixin mb($mb:0) {
-    margin-bottom: $mb;
-}
-
-@mixin p($p:0) {
-    padding: $p;
-}
-
-@mixin pt($pt:0) {
-    padding-top: $pt;
-}
-
-@mixin pb($pb:0) {
-    padding-bottom: $pb;
-}
-
-@mixin ps($ps:0) {
-    padding-left: $ps;
-}
-
-@mixin pe($pe:0) {
-    padding-right: $pe;
-}
-
-@mixin px($px:0) {
-    padding-inline: $px;
-}
-
-@mixin py($py:0) {
-    padding-block: $py;
-}
-
-@mixin text($size: 1rem, $align: left, $weight: normal, $style: normal, ) {
+//Font
+@mixin text($size: 1rem, $align: none, $weight: none, $style: none ) {
     font-size: $size;
-    font-weight: $weight;
-    font-style: $style;
-    text-align: $align;
+    @if $weight != none { font-weight: $weight }
+    @if $style != none { font-style: $style; }
+    @if $align != none { text-align: $align; }
 }
