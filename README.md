@@ -1,4 +1,8 @@
-# React + TypeScript + Vite
+# [Ecole du Web](https://www.ecole-du-web.net/) - Actos
+
+Project of the course "Code 3 sites from A to Z"
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
