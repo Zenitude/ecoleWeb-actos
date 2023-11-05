@@ -12,3 +12,76 @@ html, body, #root {
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-title;
 }
+
+.main {
+    @include py(70px 110px);
+}
+
+.link {
+    display: inline-block;
+    @include size-container(100%, 60px);
+    @include minmax-w(240px, 350px);
+    @include flex(0, row, center, center);
+    @include text(1.5rem);
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.action {
+    @include bg($color-blue);
+    color: $color-white;
+    border: 2px solid $color-blue;
+
+    &:hover {
+        color: $color-blue;
+        @include bg($color-white);
+    }   
+}
+
+.action-outline {
+    @include bg($color-white);
+    color: $color-blue;
+    border: 2px solid $color-blue;
+
+    &:hover {
+        color: $color-white;
+        @include bg($color-blue);
+    }  
+}
+
+.pill {
+    border-radius: 30px;
+}
+
+section h2 {
+    @include size-container(fit-content);
+    @include mx(auto);
+    @include mb(60px);
+    @include text(2.1rem, center);
+    @include flex(0, column, center, center);
+    position: relative;
+    
+    &::after {
+        content:'';
+        position: absolute;
+        bottom: -5px;
+        @include size-container(80%, 2px);
+        @include bg($color-black);
+    }
+}
+
+#satisfaction {
+    @include flex(20px, column, center, center);
+
+    h2 {
+        @include m(0);
+        &::after {
+            content: none;
+        }
+    }
+
+    p {
+        @include text(1.5rem, center);
+    }
+
+}

@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Dropdown from "../../components/Dropdown/Dropdown";
+import Satisfaction from "../../components/Satisfaction/Satisfaction";
 import { performances } from "../../utils/datas/performances";
 import { faqs } from "../../utils/datas/faqs";
 import { server } from "../../assets";
 
 export default function Home() {
   return (
-    <main className="main-home">
+    <main className="main main-home">
       
       <section id="hosting">
         <h1>Hébergez sans limite.</h1>
@@ -39,11 +39,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="satisfaction">
-        <h2>30 jours satisfait ou remboursé</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        <Link to={"/trial"}>Commencer</Link>
-      </section>
+      <Satisfaction />
 
     </main>
   )

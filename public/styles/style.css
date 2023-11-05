@@ -14,6 +14,90 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Comfortaa", sans-serif;
 }
 
+.main {
+  padding-block: 70px 110px;
+}
+
+.link {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  min-width: 240px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.action {
+  background: #8a56eb;
+  color: #f1f1f1;
+  border: 2px solid #8a56eb;
+}
+.action:hover {
+  color: #8a56eb;
+  background: #f1f1f1;
+}
+
+.action-outline {
+  background: #f1f1f1;
+  color: #8a56eb;
+  border: 2px solid #8a56eb;
+}
+.action-outline:hover {
+  color: #f1f1f1;
+  background: #8a56eb;
+}
+
+.pill {
+  border-radius: 30px;
+}
+
+section h2 {
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 60px;
+  font-size: 2.1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+section h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 80%;
+  height: 2px;
+  background: #000;
+}
+
+#satisfaction {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+#satisfaction h2 {
+  margin: 0;
+}
+#satisfaction h2::after {
+  content: none;
+}
+#satisfaction p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 header {
   width: 100%;
   min-height: 70px;
@@ -158,9 +242,6 @@ footer address a:hover {
   flex-grow: 1;
 }
 
-.main-home {
-  padding-block: 70px 110px;
-}
 .main-home #hosting {
   padding: 20px 10px 60px;
 }
@@ -181,27 +262,6 @@ footer address a:hover {
 }
 .main-home #hosting figure img {
   width: 100%;
-}
-.main-home #performances h2, .main-home #faq h2, .main-home #satisfaction h2 {
-  width: fit-content;
-  margin-inline: auto;
-  margin-bottom: 80px;
-  font-size: 2.1rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.main-home #performances h2::after, .main-home #faq h2::after, .main-home #satisfaction h2::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  width: 80%;
-  height: 2px;
-  background: #000;
 }
 .main-home #performances {
   min-height: 500px;
@@ -281,47 +341,13 @@ footer address a:hover {
   width: 25px;
 }
 .main-home #satisfaction {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  min-height: 500px;
   background: linear-gradient(45deg, rgba(251, 247, 230, 0.53) 0%, rgba(251, 247, 230, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 100.002%), linear-gradient(135deg, #f890d8 0%, #f890d8 12.5%, #ffa1eb 12.5%, #ffa1eb 25%, #f6a7f1 25%, #f6a7f1 37.5%, #f2b8fb 37.5%, #f2b8fb 50%, #e0b7f6 50%, #e0b7f6 62.5%, #d4b7fd 62.5%, #d4b7fd 75%, #a192fb 75%, #a192fb 87.5%, #939ff8 87.5%, #939ff8 100%);
-  padding: 150px 10px;
   clip-path: polygon(0 17%, 100% 0%, 100% 82%, 0 100%);
+  padding: 150px 10px;
 }
-.main-home #satisfaction h2 {
-  margin: 0;
-}
-.main-home #satisfaction h2::after {
-  content: none;
-}
-.main-home #satisfaction p {
-  font-size: 1.5rem;
-  text-align: center;
-}
-.main-home #satisfaction a {
-  display: inline-block;
-  width: 100%;
-  height: 60px;
-  min-width: 240px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  justify-content: center;
-  align-items: center;
-  background: #8a56eb;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: #f1f1f1;
-  border-radius: 30px;
-}
-.main-home #satisfaction a:hover {
-  border: 2px solid #8a56eb;
-  color: #8a56eb;
-  background: #f1f1f1;
+
+.main-features #products img {
+  width: 100px;
 }
 
 @media (min-width: 715px) {
