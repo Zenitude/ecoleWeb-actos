@@ -26,13 +26,12 @@
 
     #performances {
         @include minmax-h(500px);
-        @include bg(none, $linear-harlequin);
+        @include bg(no, $linear-harlequin);
         @include p(150px 10px);
         clip-path: $clip-path-performances;
 
         .cards {
-            @include flex(40px, row, center, center);
-            flex-wrap: wrap;
+            @include flex(40px, no, wrap, center, center);
 
             article{
                 @include size-container(30%);
@@ -71,7 +70,7 @@
 
                 summary {
                     @include bg($color-white);
-                    @include flex(10px, row, between, center);
+                    @include flex(10px, no, no, between, center);
                     @include p(10px);
                     @include text(1.5rem);
                     cursor: pointer;
@@ -101,7 +100,7 @@
     }
 
     #satisfaction {
-        @include bg(none, $linear-harlequin);
+        @include bg(no, $linear-harlequin);
         clip-path: $clip-path-satisfaction;
         @include p(150px 10px);
     }

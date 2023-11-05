@@ -21,16 +21,16 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     @include size-container(100%, 60px);
     @include minmax-w(240px, 350px);
-    @include flex(0, row, center, center);
+    @include flex(0, no, no, center, center);
     @include text(1.5rem);
     text-decoration: none;
-    border-radius: 15px;
+    @include border(no, no, no, 15px);
 }
 
 .action {
     @include bg($color-blue);
     color: $color-white;
-    border: 2px solid $color-blue;
+    @include border(2px, solid, $color-blue);
 
     &:hover {
         color: $color-blue;
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 .action-outline {
     @include bg($color-white);
     color: $color-blue;
-    border: 2px solid $color-blue;
+    @include border(2px, solid, $color-blue);
 
     &:hover {
         color: $color-white;
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pill {
-    border-radius: 30px;
+    @include border(no, no, no, 30px);
 }
 
 section h2 {
@@ -58,7 +58,7 @@ section h2 {
     @include mx(auto);
     @include mb(60px);
     @include text(2.1rem, center);
-    @include flex(0, column, center, center);
+    @include flex(0, column, no, center, center);
     position: relative;
     
     &::after {
@@ -71,7 +71,7 @@ section h2 {
 }
 
 #satisfaction {
-    @include flex(20px, column, center, center);
+    @include flex(20px, column, no, center, center);
 
     h2 {
         @include m(0);

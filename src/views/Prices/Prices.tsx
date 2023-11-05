@@ -14,11 +14,13 @@ export default function Prices() {
       <section id="prices">
         <h1>Trouvez ce qu'il vous faut</h1>
         <div className="table">
+          
           <div className="btns">
             { pricesData.map((price, index) => 
               <button key={index} data-id={index} onClick={() => setIndex(index)}>{price.name}</button>
             )}
           </div>
+
           <table>
             <thead>
               <tr>

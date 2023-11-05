@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ItemGallery from "../../components/ItemGallery/ItemGallery";
 import Card from "../../components/Card/Card";
 import Satisfaction from "../../components/Satisfaction/Satisfaction";
 import { allFeatures } from "../../utils/datas/features";
@@ -18,7 +17,7 @@ export default function Features() {
         </div>
         <div className="cards">
           { allFeatures.map((feature, index) => 
-              <Card key={index} icon={feature.icon} title={feature.title} txt={feature.txt} />
+              <Card key={index} img={feature.icon} title={feature.title} txt={feature.txt} />
           )}
         </div>
       </section>
@@ -34,9 +33,9 @@ export default function Features() {
 
       <section id="products">
         <h2>Nos Produits</h2>
-        <div className="gallery">
+        <div className="cards">
           { products.map(({title, subtitle, txt, link, img}, index) => 
-              <ItemGallery key={index} title={title} subtitle={subtitle} txt={txt} link={link} img={img}/>
+              <Card key={index} img={img.src} alt={img.alt} title={title} subtitle={subtitle} txt={txt} link={link.href} />
           )}
         </div>
       </section>

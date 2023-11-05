@@ -3,7 +3,7 @@ footer {
     @include flex(10px, column);
     @include bg($color-white);
     @include py(20px 40px);
-    border-top: 1px dashed $color-black;
+    @include border-t(1px, dashed, $color-black);
 
     h2 {
         @include size-container(100%);
@@ -12,7 +12,7 @@ footer {
     }
 
     .networks {
-        @include flex(10px, row, center, center);
+        @include flex(10px, no, no, center, center);
 
         a {
             display: block;
@@ -25,7 +25,7 @@ footer {
     }
 
     address {
-        @include flex(10px, column, default, center);
+        @include flex(10px, column, no, no, center);
         @include text(1.3rem);
         color: $color-dark;
         
@@ -35,9 +35,8 @@ footer {
             &:hover {
                 text-decoration: none;
                 font-weight: bold;
-                border: 2px solid $color-black;
+                @include border(2px, solid, $color-black, 15px);
                 @include p(2px 5px);
-                border-radius: 15px;
             }
         }
     }

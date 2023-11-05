@@ -1,6 +1,8 @@
 export type CardProps = {
-    icon?: string;
+    img?: string;
+    alt?: string;
     title: string;
     subtitle?: string;
     txt: string;
+    link?: string;
 }

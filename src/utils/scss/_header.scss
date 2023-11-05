@@ -10,7 +10,7 @@ header {
     a {
         display: block;
         @include size-container(100%, 70px);
-        @include flex(0, row, center, center);
+        @include flex(0, no, no, center, center);
         @include text(2rem);
         text-decoration: none;
         color: $color-black;
@@ -21,7 +21,7 @@ header {
         position: absolute;
         right: 10px;
         top: 10px;
-        border: none;
+        @include border(none);
         @include bg(transparent);
         cursor: pointer;
 
@@ -32,14 +32,14 @@ header {
     }
 
     nav {
-        @include flex(10px, column, center, center);
+        @include flex(10px, column, no, center, center);
         @include pb(20px);
-        border-bottom: 1px solid $color-black;
+        @include border-b(1px, solid, $color-black);
 
         a {
             display: block;
             @include size-container(fit-content, 70px);
-            @include flex(0, row, center, center);
+            @include flex(0, no, no, center, center);
             @include text(1.5rem);
             text-decoration: none;
             color: $color-black;

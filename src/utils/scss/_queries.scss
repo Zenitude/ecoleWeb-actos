@@ -1,8 +1,8 @@
 @media (min-width: 715px) {
     header {
-        @include flex(10px, row, center, center);
+        @include flex(10px, row, no,center, center);
         @include px(20px);
-        border: none;
+        @include border(none);
 
         a {
             @include size-container(auto, auto);
@@ -11,8 +11,8 @@
         nav {
             flex-grow: 1;
             @include pb(0);
-            @include flex(20px, row, default, center);
-            border-bottom: none;
+            @include flex(20px, row, none, center);
+            @include border-b(none);
             
             a:first-of-type {
                 @include ms(auto);
@@ -27,8 +27,8 @@
                 @include size-container(auto, 50px);
                 @include px(10px);
                 @include ms(auto);
-                @include bg(none, $linear-trial);
-                border-radius: 15px;
+                @include bg(no, $linear-trial);
+                @include border(no, no, no, 15px);
                 color: $color-white;
             
                 &::after {
@@ -36,21 +36,18 @@
                 }
 
                 &:hover {
-                    @include bg(none, $linear-trial-hover);
+                    @include bg(no, $linear-trial-hover);
                     box-shadow: inset 0 0 5px $color-black;
                 }
-                
-
             }
         }
     }
 
+    .main section h2 {
+        @include text(3.5rem);
+    }
+
     .main-home {
-        #performances, #faq, #satisfaction {
-            h2 {
-                @include text(3.5rem);
-            }
-        }
 
         #performances {
             @include py(170px);
@@ -76,6 +73,74 @@
 
         #faq {
             @include px(40px);
+        }
+    }
+
+    .main-features {
+        #features {
+            h1 {
+                @include text(4rem);
+            }
+        }
+
+        #newsletter {
+            form {
+                display: block;
+                @include size-container(no, 50px);
+                @include mt(20px);
+                @include mx(auto);
+                @include border(2px, solid, $color-black, 50px);
+                position: relative;
+                overflow: hidden;
+
+                input {
+                    @include border(none);
+                    @include size-container(100%, 100%);
+                    @include px(15px 215px);
+                }
+
+                button {
+                    position: absolute;
+                    right: 0;
+                    @include size-container(200px, 100%);
+                    @include minmax-w(auto, auto);
+                    @include border(none);
+                    @include border-s(3px, solid, $color-black);
+
+                    &:hover {
+                        @include bg($color-blue);
+                        color: $color-white;
+                    }
+                }
+                
+            }
+        }
+
+        #products {
+            .cards {
+                
+                article {
+                    .content, img {
+                        @include size-container(45%);
+                    }
+
+                    .content {
+                        h3 {
+                            @include text(2.5rem);
+                        }
+
+                        h4 {
+                            @include text(1.5rem);
+                        }
+
+                        p, a {
+                            @include text(1.2rem);
+                        }
+                        
+                    }
+                    
+                }
+            }
         }
     }
 }
