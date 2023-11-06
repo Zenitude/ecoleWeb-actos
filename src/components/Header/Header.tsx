@@ -34,9 +34,9 @@ export default function Header({size}: HeaderProps) {
                 ((size > 715) || (size < 715 && toggle)) &&
                 (
                     <nav>
-                        <NavLink to={"/"}>Pourquoi Actos ?</NavLink>
-                        <NavLink to={"/features"}>Fonctionnalités</NavLink>
-                        <NavLink to={"/prices"}>Tarifs</NavLink>
+                        <NavLink to={"/"} onClick={() => setToggle(!toggle)}>Pourquoi Actos ?</NavLink>
+                        <NavLink to={"/features"} onClick={() => setToggle(!toggle)}>Fonctionnalités</NavLink>
+                        <NavLink to={"/prices"} onClick={() => setToggle(!toggle)}>Tarifs</NavLink>
                         {
                             (size > 715) && (<NavLink to={"/trial"}>Essai gratuit</NavLink>)
                         }

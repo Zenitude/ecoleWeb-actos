@@ -1,0 +1,68 @@
+.main-prices {
+
+    #prices {
+        @include p(20px 10px 60px);
+
+        h1 {
+            @include size-container(fit-content);
+            @include text(1.8rem, center);
+            @include m(40px auto);
+            @include flex(10px, column);
+
+            &::after {
+                content: '';
+                @include size-container(50%, 2px);
+                @include bg($color-black);
+                @include mx(auto);
+            }
+        }
+
+        .table {
+            @include minmax-w(240px, 600px);
+            @include mx(auto);
+            @include flex(0, column);
+            box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+
+            .btns {
+                @include grid(0, repeat(3, 1fr), 60px);
+
+                button {
+                    @include border(none);
+                    @include border-e(1px, solid, $color-white);
+                    @include border-s(1px, solid, $color-white);
+                    @include bg($color-dark);
+                    color: $color-white;
+                    text-transform: uppercase;
+                    @include text(1.5rem);
+
+                    &.activeBtn {
+                        @include bg($color-white);
+                        color: $color-dark;
+                        border: none;
+                    }
+                }
+            }
+
+            table {
+                border-collapse: collapse;
+                @include bg(no, $linear-harlequin);
+
+                th, td {
+                    @include border(1px, solid, $color-black);
+                    @include p(10px);
+                    @include text(1.2rem);
+                }
+
+                th {
+                    text-transform: uppercase;
+                }
+
+                td {
+                    width: 50%;
+                }
+            }
+        }
+
+
+    }
+}

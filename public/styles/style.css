@@ -485,6 +485,70 @@ footer address a:hover {
   padding-inline: 10px;
 }
 
+.main-prices #prices {
+  padding: 20px 10px 60px;
+}
+.main-prices #prices h1 {
+  width: fit-content;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 40px auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.main-prices #prices h1::after {
+  content: "";
+  width: 50%;
+  height: 2px;
+  background: #000;
+  margin-inline: auto;
+}
+.main-prices #prices .table {
+  min-width: 240px;
+  max-width: 600px;
+  margin-inline: auto;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.main-prices #prices .table .btns {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px;
+}
+.main-prices #prices .table .btns button {
+  border: none;
+  border-right: 1px solid #f1f1f1;
+  border-left: 1px solid #f1f1f1;
+  background: #333;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.main-prices #prices .table .btns button.activeBtn {
+  background: #f1f1f1;
+  color: #333;
+  border: none;
+}
+.main-prices #prices .table table {
+  border-collapse: collapse;
+  background: linear-gradient(45deg, rgba(251, 247, 230, 0.53) 0%, rgba(251, 247, 230, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 100.002%), linear-gradient(135deg, #f890d8 0%, #f890d8 12.5%, #ffa1eb 12.5%, #ffa1eb 25%, #f6a7f1 25%, #f6a7f1 37.5%, #f2b8fb 37.5%, #f2b8fb 50%, #e0b7f6 50%, #e0b7f6 62.5%, #d4b7fd 62.5%, #d4b7fd 75%, #a192fb 75%, #a192fb 87.5%, #939ff8 87.5%, #939ff8 100%);
+}
+.main-prices #prices .table table th, .main-prices #prices .table table td {
+  border: 1px solid #000;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.main-prices #prices .table table th {
+  text-transform: uppercase;
+}
+.main-prices #prices .table table td {
+  width: 50%;
+}
+
 @media (min-width: 715px) {
   header {
     display: flex;

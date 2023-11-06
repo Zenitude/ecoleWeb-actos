@@ -3,10 +3,10 @@ import Satisfaction from "../../components/Satisfaction/Satisfaction";
 import { pricesData } from "../../utils/datas/prices";
 
 export default function Prices() {
-  const [ index, setIndex ] = useState(0);
+  const [ indexPrice, setIndexPrice ] = useState(0);
   const [ options, setOptions ] = useState(pricesData[0].options);
 
-  useEffect(() => setOptions(pricesData[index].options), [index]);
+  useEffect(() => setOptions(pricesData[indexPrice].options), [indexPrice]);
 
   return (
     <main className="main main-prices">
@@ -17,7 +17,7 @@ export default function Prices() {
           
           <div className="btns">
             { pricesData.map((price, index) => 
-              <button key={index} data-id={index} onClick={() => setIndex(index)}>{price.name}</button>
+              <button className={indexPrice === index ? "activeBtn" : "" } key={index} data-id={index} onClick={() => setIndexPrice(index)}>{price.name}</button>
             )}
           </div>
 
